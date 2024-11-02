@@ -1103,7 +1103,7 @@ body {
             <p class="description">
                 Okto Infinitium adalah sebuah production house yang berasal dari <b>SMK Boash One</b>, dibentuk oleh siswa-siswi kreatif kelas <mark style="background: #f4ebdc"><b>11 DKV 8</b></mark>. Saat ini, kami bangga berpartisipasi dalam <u><b>Boash Movie Awards</b></u>, dengan tujuan tidak hanya untuk bersaing, tetapi juga untuk menunjukkan kualitas dan komitmen kami dalam industri kreatif. Melalui situs ini, kami mempersembahkan proyek terbaru kami,<mark style="background: #f4ebdc"><b>Temporis Kelana</b></mark> —sebuah film yang menggambarkan perjalanan, inovasi, dan profesionalisme kami dalam mengemas ide-ide menjadi karya visual yang inspiratif dan penuh makna.
             <div class="film-container">
-                <h2 class="film-title">Film Kami</h2>
+                <h2 class="film-title">Our Movie</h2>
                 <img src="poster.png" alt="Poster Film" style="width: 100%; max-width: 420px; margin-top: 1rem;">
 <!-- Add these updated styles in the <style> section -->
 <style>
@@ -1228,7 +1228,7 @@ body {
 
 <!-- In the film-container div, update the synopsis section -->
 <div class="synopsis-container">
-    <h2 class="synopsis-title">Sinopsis</h2>
+    <h2 class="synopsis-title">Synopsis</h2>
     <p class="synopsis-text">
         Sekelompok tarian les sekolah telah diberi kesempatan untuk mengikuti lomba sanggar di sekolahnya. Mereka harus berlatih untuk menari semampu-mampunya selama seminggu sebelum lomba dimulai. Sheila, salah satu penari kelompok dari sekolahnya, berjuang untuk menemukan tujuannya menjadi penari, dalam perjalanannya menjadi pemain yang lebih baik, di tengah perjalanannya, sheila dapat menemukan lebih dari yang dia harapkan, namun di lingkungan yang lebih asing
     </p>
@@ -1536,7 +1536,6 @@ body {
         });
     </script>
 </body>
-</html>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1566,10 +1565,10 @@ body {
             background: var(--primary-bg);
         }
 
-        .documentation-title {
+        .documentation-title, .crew-title {
             text-align: center;
             font-size: 2.5rem;
-            margin: 1.5rem 0; /* Reduced margin */
+            margin: 1.5rem 0;
             background: linear-gradient(45deg, var(--text-light), var(--accent));
             -webkit-background-clip: text;
             background-clip: text;
@@ -1586,25 +1585,39 @@ body {
         .image-gallery {
             display: flex;
             flex-direction: column;
-            gap: 2rem; /* Reduced gap from 4rem to 2rem */
-            max-width: 1000px; /* Reduced max-width from 1200px */
+            gap: 2rem;
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 1.5rem; /* Reduced padding */
+            padding: 1.5rem;
             background: var(--primary-bg);
+        }
+
+        .crew-gallery {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1.5rem;
         }
 
         .gallery-image-container {
             position: relative;
             width: 100%;
-            padding-top: 50%; /* Reduced height ratio */
+            padding-top: 50%;
             cursor: pointer;
             overflow: hidden;
-            border-radius: 12px; /* Slightly reduced border radius */
+            border-radius: 12px;
             opacity: 0;
             transform: translateY(50px);
             transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
             background: var(--primary-light);
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .crew-image-container {
+            padding-top: 100%; /* Make containers square */
+            margin-bottom: 0;
         }
 
         .gallery-image-container.visible {
@@ -1623,7 +1636,7 @@ body {
         }
 
         .gallery-image-container.visible:hover .gallery-image {
-            transform: scale(1.08); /* Reduced scale effect */
+            transform: scale(1.08);
         }
 
         .gallery-image-container.visible.in-view {
@@ -1640,7 +1653,7 @@ body {
                     0 0 30px rgba(74, 144, 226, 0.6),
                     0 0 60px rgba(74, 144, 226, 0.4),
                     0 0 90px rgba(74, 144, 226, 0.2);
-                transform: scale(1.03); /* Reduced scale effect */
+                transform: scale(1.03);
             }
             100% {
                 box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
@@ -1664,6 +1677,25 @@ body {
 
         .gallery-image-container:hover::after {
             opacity: 1;
+        }
+
+        /* Responsive grid layout */
+        @media (max-width: 1200px) {
+            .crew-gallery {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        @media (max-width: 900px) {
+            .crew-gallery {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .crew-gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
 
         html {
@@ -1712,6 +1744,104 @@ body {
         </div>
     </div>
 
+    <h2 class="crew-title">Our Crew</h2>
+
+    <div class="crew-gallery">
+        <!-- 28 crew images in a 5x6 grid -->
+        <div class="gallery-image-container crew-image-container">
+            <img src="crew.jpg" alt="Crew Member 1" class="gallery-image">
+        </div>
+        <div class="gallery-image-container crew-image-container">
+            <img src="crew2.png" alt="Crew Member 2" class="gallery-image">
+        </div>
+        <div class="gallery-image-container crew-image-container">
+            <img src="crew.jpg" alt="Crew Member 3" class="gallery-image">
+        </div>
+        <div class="gallery-image-container crew-image-container">
+            <img src="crew.jpg" alt="Crew Member 4" class="gallery-image">
+        </div>
+        <div class="gallery-image-container crew-image-container">
+            <img src="crew.jpg" alt="Crew Member 5" class="gallery-image">
+        </div>
+        <div class="gallery-image-container crew-image-container">
+            <img src="crew.jpg" alt="Crew Member 6" class="gallery-image">
+        </div>
+        <div class="gallery-image-container crew-image-container">
+            <img src="crew.jpg" alt="Crew Member 7" class="gallery-image">
+        </div>
+        <div class="gallery-image-container crew-image-container">
+            <img src="crew.jpg" alt="Crew Member 8" class="gallery-image">
+        </div>
+        <div class="gallery-image-container crew-image-container">
+            <img src="crew.jpg" alt="Crew Member 9" class="gallery-image">
+        </div>
+        <div class="gallery-image-container crew-image-container">
+            <img src="crew.jpg" alt="Crew Member 10" class="gallery-image">
+        </div>
+        <div class="gallery-image-container crew-image-container">
+            <img src="crew.jpg" alt="Crew Member 11" class="gallery-image">
+        </div>
+        <div class="gallery-image-container crew-image-container">
+            <img src="crew.jpg" alt="Crew Member 12" class="gallery-image">
+        </div>
+        <div class="gallery-image-container crew-image-container">
+            <img src="crew.jpg" alt="Crew Member 13" class="gallery-image">
+        </div>
+        <div class="gallery-image-container crew-image-container">
+            <img src="crew.jpg" alt="Crew Member 14" class="gallery-image">
+        </div>
+        <div class="gallery-image-container crew-image-container">
+            <img src="crew.jpg" alt="Crew Member 15" class="gallery-image">
+        </div>
+        <div class="gallery-image-container crew-image-container">
+            <img src="crew.jpg" alt="Crew Member 16" class="gallery-image">
+        </div>
+        <div class="gallery-image-container crew-image-container">
+            <img src="crew.jpg" alt="Crew Member 17" class="gallery-image">
+        </div>
+        <div class="gallery-image-container crew-image-container">
+            <img src="crew.jpg" alt="Crew Member 18" class="gallery-image">
+        </div>
+        <div class="gallery-image-container crew-image-container">
+            <img src="crew.jpg" alt="Crew Member 19" class="gallery-image">
+        </div>
+        <div class="gallery-image-container crew-image-container">
+            <img src="crew.jpg" alt="Crew Member 20" class="gallery-image">
+        </div>
+        <div class="gallery-image-container crew-image-container">
+            <img src="crew.jpg" alt="Crew Member 21" class="gallery-image">
+        </div>
+        <div class="gallery-image-container crew-image-container">
+            <img src="crew.jpg" alt="Crew Member 22" class="gallery-image">
+        </div>
+        <div class="gallery-image-container crew-image-container">
+            <img src="crew.jpg" alt="Crew Member 23" class="gallery-image">
+        </div>
+        <div class="gallery-image-container crew-image-container">
+            <img src="crew.jpg" alt="Crew Member 24" class="gallery-image">
+        </div>
+        <div class="gallery-image-container crew-image-container">
+            <img src="crew.jpg" alt="Crew Member 25" class="gallery-image">
+        </div>
+        <div class="gallery-image-container crew-image-container">
+            <img src="crew.jpg" alt="Crew Member 26" class="gallery-image">
+        </div>
+        <div class="gallery-image-container crew-image-container">
+            <img src="crew.jpg" alt="Crew Member 27" class="gallery-image">
+        </div>
+        <div class="gallery-image-container crew-image-container">
+            <img src="crew.jpg" alt="Crew Member 28" class="gallery-image">
+        </div>
+        <div class="gallery-image-container crew-image-container">
+            <img src="crew.jpg" alt="Crew Member 29" class="gallery-image">
+        </div>
+        <div class="gallery-image-container crew-image-container">
+            <img src="crew.jpg" alt="Crew Member 30" class="gallery-image">
+        </div>
+    </div>
+    </div>
+    
+
     <script>
         const observerOptions = {
             root: null,
@@ -1742,7 +1872,218 @@ body {
                 }, 2000);
             });
         });
-        
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ... (bagian head tetap sama) ... -->
+    <style>
+        /* ... (style lainnya tetap sama) ... */
+
+        .crew-gallery {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1.5rem;
+        }
+
+        .crew-image-container {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 638/1011;
+            overflow: hidden;
+            border-radius: 12px;
+        }
+
+        .gallery-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: scale(1); /* Default scale */
+            transition: transform 0.3s ease;
+        }
+
+        /* Hover effect (opsional) */
+        .gallery-image-container:hover .gallery-image {
+            transform: scale(1.05);
+        }
+
+        /* Media queries untuk responsivitas */
+        @media (max-width: 1200px) {
+            .crew-gallery {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        @media (max-width: 900px) {
+            .crew-gallery {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .crew-gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<!-- ... (bagian body tetap sama) ... -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="oktoris.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Okto Infinitium</title>
+    <style>
+        :root {
+            --primary-bg: #283954;
+            --primary-light: #3a4f6f;
+            --primary-dark: #1b2839;
+            --accent: #4a90e2;
+            --text-light: #f4ebdc;
+        }
+
+        body {
+            color: var(--text-light);
+            min-height: 100vh;
+            line-height: 1.6;
+            overflow-x: hidden;
+            position: relative;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background: var(--primary-bg);
+        }
+
+        .image-gallery {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1.5rem;
+            background: var(--primary-bg);
+        }
+
+        .crew-gallery {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1.5rem;
+        }
+
+        .gallery-image-container {
+            position: relative;
+            width: 100%;
+            padding-top: 50%;
+            cursor: pointer;
+            overflow: hidden;
+            border-radius: 12px;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+            background: var(--primary-light);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .crew-image-container {
+            padding-top: 100%;
+        }
+
+        .gallery-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .gallery-image-container.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .gallery-image-container.visible:hover .gallery-image {
+            transform: scale(1.08);
+        }
+
+        @media (max-width: 1200px) {
+            .crew-gallery {
+                grid-template-columns: repeat(5, 1fr);
+            }
+        }
+
+        @media (max-width: 900px) {
+            .crew-gallery {
+                grid-template-columns: repeat(5, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .crew-gallery {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="image-gallery">
+        <div class="gallery-image-container">
+            <img src="foto.jpg" alt="Image 1" class="gallery-image">
+        </div>
+    </div>
+
+    <div class="crew-gallery">
+        <div class="gallery-image-container crew-image-container">
+            <img src="crew1.png" alt="Crew Member 1" class="gallery-image">
+        </div>
+        <!-- ... Repeat for other crew members ... -->
+    </div>
+
+    <script>
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.3
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    entry.target.classList.add('in-view');
+                    
+                    setTimeout(() => {
+                        entry.target.classList.remove('in-view');
+                    }, 2000);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.gallery-image-container').forEach(container => {
+            observer.observe(container);
+            
+            container.addEventListener('click', function() {
+                this.classList.add('in-view');
+                setTimeout(() => {
+                    this.classList.remove('in-view');
+                }, 2000);
+            });
+        });
     </script>
 </body>
 </html>
