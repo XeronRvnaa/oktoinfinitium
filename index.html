@@ -7,22 +7,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="oktoris.png">
-       <!-- Font Google: Poppins -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
     <title>Okto Infinitium</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-  
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>∞</title>
     <style>
-      <body>
-      
             user-select: none;
             -webkit-user-select: none;
             -moz-user-select: none;
@@ -36,44 +28,35 @@
 </head>
 <body>
     <script>
-        // Mencegah copy-paste
         document.addEventListener('contextmenu', function(e) {
             e.preventDefault();
         });
 
         document.addEventListener('keydown', function(e) {
-            // Mencegah shortcut copy (Ctrl+C, Cmd+C)
             if ((e.ctrlKey || e.metaKey) && (e.key === 'c' || e.keyCode === 67)) {
                 e.preventDefault();
             }
-
-            // Mencegah shortcut print screen
             if (e.key === 'PrintScreen') {
                 e.preventDefault();
             }
         });
 
-        // Mencegah drag gambar
         document.addEventListener('dragstart', function(e) {
             if (e.target.tagName === 'IMG') {
                 e.preventDefault();
             }
         });
-
-        // Mencegah download gambar dengan klik kanan
         document.addEventListener('contextmenu', function(e) {
             if (e.target.tagName === 'IMG') {
                 e.preventDefault();
             }
         });
 
-        // Mencegah screenshot dengan disabling pemilihan
         document.body.style.userSelect = 'none';
         document.body.style.webkitUserSelect = 'none';
         document.body.style.mozUserSelect = 'none';
         document.body.style.msUserSelect = 'none';
 
-        // Menampilkan pesan peringatan jika ada upaya copy
         document.addEventListener('copy', function(e) {
             e.preventDefault();
             alert('Copy tidak diizinkan!');
@@ -84,8 +67,6 @@
 </body>
 </html>
     <style>
-  
-    /* Animasi tambahan untuk efek glow */
 @keyframes textGlowFlow {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
@@ -110,19 +91,17 @@
     }
 }
     
-    /* Animate logo rotation */
 @keyframes logoRotate {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
 
-/* Animate logo float */
+
 @keyframes logoFloat {
   0% { transform: translateY(0); }
   50% { transform: translateY(-10px); }
   100% { transform: translateY(0); }
 }
-/* Background Gradient Animation */
 @keyframes backgroundFlow {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
@@ -136,7 +115,6 @@ body {
     color: #f4ebdc;
 }
 
-/* Floating Particle Animation */
 @keyframes particleFloat {
     0% { 
         transform: translate(0, 0) rotate(0deg);
@@ -160,7 +138,6 @@ body {
     z-index: -1;
 }
 
-/* Text Shimmer Effect */
 @keyframes textShimmer {
     0%, 100% { 
         text-shadow: 
@@ -184,14 +161,12 @@ body {
         textGradientFlow 5s ease infinite;
 }
 
-/* Gradient Text Flow */
 @keyframes textGradientFlow {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
 }
 
-/* Floating Text Animation */
 @keyframes floatingText {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-10px); }
@@ -204,104 +179,94 @@ body {
         textShimmer 2s ease-in-out infinite alternate;
 }
 
-/* Animate logo text glow */
 @keyframes glowText {
   0% { text-shadow: 0 0 10px var(--logo-color); }
   50% { text-shadow: 0 0 20px var(--logo-color); }
   100% { text-shadow: 0 0 10px var(--logo-color); }
 }
 
-/* Animate logo image float and glow */
 @keyframes floatAndGlow {
   0% { transform: translateY(0); box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); }
   50% { transform: translateY(-10px); box-shadow: 0 10px 25px rgba(74, 144, 226, 0.4); }
   100% { transform: translateY(0); box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); }
 }
 
-/* Animate logo image border glow */
 @keyframes glowBorder {
   0% { opacity: 0.5; }
   50% { opacity: 1; }
   100% { opacity: 0.5; }
 }
-
-/* Animate image pulse */
 @keyframes imagePulse {
   0% { transform: scale(1); }
   50% { transform: scale(1.05); }
   100% { transform: scale(1); }
 }
 
-/* Animate navbar slide down */
 @keyframes navbarSlideDown {
   0% { transform: translateY(-100%); }
   100% { transform: translateY(0); }
 }
 
-/* Animate button pulse */
 @keyframes buttonPulse {
   0% { box-shadow: 0 0 0 0 rgba(244, 235, 220, 0.4); }
   70% { box-shadow: 0 0 0 10px rgba(244, 235, 220, 0); }
   100% { box-shadow: 0 0 0 0 rgba(244, 235, 220, 0); }
 }
 
-/* Animate content fade in */
+
 @keyframes contentFadeIn {
   0% { opacity: 0; transform: translateY(50px); }
   100% { opacity: 1; transform: translateY(0); }
 }
 
-/* Animate title slide in */
 @keyframes titleSlideIn {
   0% { opacity: 0; transform: translateX(-50px); }
   100% { opacity: 1; transform: translateX(0); }
 }
 
-/* Animate subtitle slide in */
+
 @keyframes subtitleSlideIn {
   0% { opacity: 0; transform: translateX(50px); }
   100% { opacity: 1; transform: translateX(0); }
 }
 
-/* Animate description fade in */
+
 @keyframes descriptionFadeIn {
   0% { opacity: 0; }
   100% { opacity: 0.9; }
 }
 
-/* Animate film container slide up */
+
 @keyframes filmContainerSlideUp {
   0% { opacity: 0; transform: translateY(50px); }
   100% { opacity: 1; transform: translateY(0); }
 }
 
-/* Animate social links slide up */
 @keyframes socialLinksSlideUp {
   0% { opacity: 0; transform: translateY(50px); }
   100% { opacity: 1; transform: translateY(0); }
 }
-/* Animate film container flip */
+
 @keyframes filmContainerFlip {
   0% { transform: rotateY(0deg); }
   50% { transform: rotateY(90deg); }
   100% { transform: rotateY(0deg); }
 }
 
-/* Animate film poster scale */
 @keyframes filmPosterScale {
   0% { transform: scale(1); }
   50% { transform: scale(1.1); }
   100% { transform: scale(1); }
 }
 
-/* Animate social link hover */
+
 @keyframes socialLinkHover {
   0% { transform: translateY(0); background: rgba(255, 255, 255, 0.1); }
   50% { transform: translateY(-5px); background: var(--secondary-color); color: var(--primary-color); }
   100% { transform: translateY(0); background: rgba(255, 255, 255, 0.1); }
 }
 
-/* Animate description typewriter effect */
+
 @keyframes typewriter {
   from { width: 0; }
   to { width: 100%; }
@@ -312,13 +277,13 @@ body {
   50% { border-color: var(--secondary-color); }
 }
 
-/* Animate background pulse */
+
 @keyframes pulseBackground {
   0% { opacity: 1; }
   50% { opacity: 0.8; }
   100% { opacity: 1; }
     <style>
-        /* Tambahkan animasi teks */
+      
         @keyframes textGradientFlow {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
@@ -329,7 +294,7 @@ body {
             0% { text-shadow: 0 0 5px rgba(255,255,255,0.3); }
             50% { text-shadow: 0 0 15px rgba(255,255,255,0.6); }
             100% { text-shadow: 0 0 5px rgba(255,255,255,0.3); }
-                /* Tambahkan animasi teks glow */
+              
         @keyframes textGradientFlow {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
@@ -351,8 +316,7 @@ body {
                 text-shadow: 
                     0 0 5px rgba(244, 235, 220, 0.3), 
                     0 0 10px rgba(74, 144, 226, 0.2);
-            }/* Animasi glow untuk judul "Film Kami" */
-            /* Animasi Logo Bergerak dan Bercahaya */
+            }
 @keyframes logoRotate {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
@@ -375,7 +339,7 @@ body {
         glowEffect 3s ease-in-out infinite;
 }
 
-/* Animasi Tombol Hover */
+
 @keyframes buttonPulse {
     0% { transform: scale(1); }
     50% { transform: scale(1.05); }
@@ -391,7 +355,6 @@ body {
     transform: translateY(-5px);
 }
 
-/* Animasi Section Fade In */
 @keyframes sectionFadeIn {
     from { 
         opacity: 0; 
@@ -408,7 +371,6 @@ body {
     animation: sectionFadeIn 1s ease-out forwards;
 }
 
-/* Hover Effect pada Film Container */
 .film-container {
     transition: all 0.5s ease;
 }
@@ -418,7 +380,6 @@ body {
     box-shadow: 0 10px 20px rgba(74, 144, 226, 0.3);
 }
 
-/* Text Shimmer Effect */
 @keyframes textShimmer {
     0%, 100% { 
         text-shadow: 0 0 5px rgba(74, 144, 226, 0.3); 
@@ -434,7 +395,6 @@ body {
 
 }
 
-/* Background Gradient Animation */
 @keyframes backgroundFlow {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
@@ -476,7 +436,6 @@ body {
     transform: scaleX(1);
 }
 
-/* Animasi glow untuk poster film */
 .film-poster {
     position: relative;
     transition: all 0.5s ease;
@@ -516,8 +475,6 @@ body {
     transform: scale(1.05);
     box-shadow: 0 0 30px rgba(74, 144, 226, 0.5);
 }
-
-/* Animasi glow untuk sinopsis */
 .synopsis-container {
     position: relative;
     background: rgba(40, 57, 84, 0.5);
@@ -528,7 +485,6 @@ body {
 }
 }
 
-/* Responsif untuk layar kecil */
 @media (max-width: 768px) {
     .film-section-title,
     .synopsis-title {
@@ -591,7 +547,7 @@ body {
             font-family: var(--body-font); /* Default font */
         }
 
-        /* Update font untuk elemen spesifik */
+        
         .title {
             font-family: var(--primary-font);
             font-weight: 700;
@@ -686,7 +642,7 @@ body {
             animation: glowText 2s ease-in-out infinite;
             font-family: 'Godiva Regular', Arial, sans-serif;
         }
-         /* Terapkan efek glow pada elemen-elemen tertentu */
+         
         .title {
             animation: textShimmer 3s ease-in-out infinite;
         }
@@ -703,7 +659,7 @@ body {
             animation: textShimmer 3s ease-in-out infinite 1.5s;
         }
 
-        /* Efek gradient pada beberapa elemen */
+      
         .logo-text {
             background: linear-gradient(45deg, #f4ebdc, #4a90e2, #f4ebdc);
             background-size: 200% 100%;
@@ -990,7 +946,7 @@ body {
             <div class="logo-text">Okto Infinitium</div>
         </div>
     </div>
-<!DOCTYPE html>
+<!DOCTYPE html>l
 <html lang="en">
 <head>
     <meta name="google-site-verification" content="115cjbHFn-XNny6BeVa0dEQvlAWdQphRUc7vcAZAj2Q" />
@@ -1000,9 +956,7 @@ body {
     <title>Okto Infinitium</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        /* [Semua CSS sebelumnya tetap sama] */
-
-        /* Update untuk deskripsi */
+        
         .description {
             text-align: justify; /* Tambahkan justify */
             font-family: 'Arial', sans-serif; /* Font yang lebih modern */
@@ -1081,7 +1035,7 @@ body {
 
 </head>
 <body>
-    <!-- [Seluruh struktur body sebelumnya tetap sama] -->
+    
 </body>
 </html>
     <nav class="navbar">
@@ -1106,10 +1060,9 @@ body {
             <div class="film-container">
                 <h2 class="film-title">Our Movie</h2>
                 <img src="poster.png" alt="Poster Film" style="width: 100%; max-width: 420px; margin-top: 1rem;">
-<!-- Add these updated styles in the <style> section -->
 <style>
 
-/* Previous styles remain the same */
+
 
 .synopsis-container {
     background: #283954;
@@ -1190,7 +1143,7 @@ body {
     background: linear-gradient(135deg, #4a90e2, #283954);
 }
 
-/* Add paper texture effect */
+
 .synopsis-container::after {
     content: '';
     position: absolute;
@@ -1227,7 +1180,7 @@ body {
 }
 </style>
 
-<!-- In the film-container div, update the synopsis section -->
+
 <div class="synopsis-container">
     <h2 class="synopsis-title">Synopsis</h2>
     <p class="synopsis-text">
@@ -1263,7 +1216,7 @@ body {
     <title>Okto Infinitium</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        /* [Semua CSS sebelumnya] */
+      
 
         .main-content {
             padding: 8rem 5% 5rem;
@@ -1347,11 +1300,6 @@ body {
     </style>
 </head>
 <body>
-  
-    <!-- Struktur body tetap sama seperti sebelumnya -->
-</body>
-</html>
-</body>
 </html>
 <!DOCTYPE html>
 <html lang="id">
@@ -1455,7 +1403,7 @@ body {
 </head>
 <body>
     <div class="music-player-container">
-        <!-- Tombol Selanjutnya -->
+      
         <div class="music-player-btn" id="nextBtn">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <polygon points="2 3 11 12 2 21 2 3" />
@@ -1463,7 +1411,7 @@ body {
             </svg>
         </div>
 
-        <!-- Tombol Play/Pause -->
+      
         <div class="music-player-btn" id="musicToggleBtn">
             <svg class="play-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <polygon points="5 3 19 12 5 21 5 3"></polygon>
@@ -1474,7 +1422,7 @@ body {
             </svg>
         </div>
 
-        <!-- Tombol Sebelumnya -->
+  
         <div class="music-player-btn" id="prevBtn">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <polygon points="11 3 2 12 11 21 11 3" />
@@ -1495,7 +1443,7 @@ body {
         const nextBtn = document.getElementById('nextBtn');
         let isPlaying = false;
 
-        // Daftar lagu
+        
         const playlist = [
             "music.mp3",
             "music2.mp3",
@@ -1506,13 +1454,13 @@ body {
         ];
         let currentSongIndex = 0;
 
-        // Fungsi untuk mengganti lagu
+      
         function changeSong(index) {
             music.src = playlist[index];
             if (isPlaying) music.play();
         }
 
-        // Mengatur status play/pause
+        
         musicToggleBtn.addEventListener('click', () => {
             if (isPlaying) {
                 music.pause();
@@ -1524,13 +1472,13 @@ body {
             isPlaying = !isPlaying;
         });
 
-        // Tombol Sebelumnya
+      
         prevBtn.addEventListener('click', () => {
             currentSongIndex = (currentSongIndex - 1 + playlist.length) % playlist.length;
             changeSong(currentSongIndex);
         });
 
-        // Tombol Selanjutnya
+    
         nextBtn.addEventListener('click', () => {
             currentSongIndex = (currentSongIndex + 1) % playlist.length;
             changeSong(currentSongIndex);
@@ -1756,7 +1704,7 @@ body {
     
 
     <div class="crew-gallery">
-        <!-- 28 crew images in a 5x6 grid -->
+      
         <div class="gallery-image-container crew-image-container">
             <img src="PA TRYAS.jpg" alt="Crew Member 1" class="gallery-image">
         </div>
@@ -1925,7 +1873,7 @@ body {
     </style>
 </head>
 <body>
-    <!-- Modal structure -->
+  
     <div class="modal">
         <button class="back-button">
             <i class="fas fa-arrow-left"></i>
@@ -1945,7 +1893,7 @@ body {
             container.addEventListener('click', function() {
                 const image = this.querySelector('.gallery-image');
                 
-                // Preload image
+              
                 const img = new Image();
                 img.src = image.src;
                 img.onload = function() {
@@ -1963,15 +1911,15 @@ body {
             document.body.style.overflow = '';
         }
 
-        // Menutup modal ketika mengklik tombol back
+      
         backButton.addEventListener('click', closeModal);
         
-        // Menutup modal ketika mengklik di mana saja di dalam modal
+      
         modal.addEventListener('click', function(e) {
             closeModal();
         });
 
-        // Menutup modal dengan tombol Escape
+      
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape' && modal.classList.contains('active')) {
                 closeModal();
@@ -2026,9 +1974,9 @@ body {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- ... (bagian head tetap sama) ... -->
+
     <style>
-        /* ... (style lainnya tetap sama) ... */
+
 
         .crew-gallery {
             display: grid;
@@ -2091,7 +2039,7 @@ body {
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <title>Okto Infinitium</title>
     <style>
-        /* Your existing styles */
+
         :root {
             --primary-bg: #283954;
             --primary-light: #3a4f6f;
@@ -2100,9 +2048,9 @@ body {
             --text-light: #f4ebdc;
         }
 
-        /* ... (previous styles remain the same) ... */
 
-        /* New styles for the modal */
+
+
         .modal {
             display: none;
             position: fixed;
@@ -2141,26 +2089,24 @@ body {
             }
         }
 
-        /* Your existing styles continue... */
+
         
     </style>
 </head>
 <body>
-    <!-- Your existing HTML content -->
 
-    <!-- Add modal container -->
     <div id="imageModal" class="modal">
         <img class="modal-content" id="modalImage">
     </div>
 
     <script>
-        // Your existing intersection observer code
 
-        // Add modal functionality
+
+
         const modal = document.getElementById('imageModal');
         const modalImg = document.getElementById('modalImage');
 
-        // Add click event to all gallery images
+
         document.querySelectorAll('.gallery-image').forEach(img => {
             img.addEventListener('click', function() {
                 modal.style.display = 'block';
@@ -2169,13 +2115,13 @@ body {
             });
         });
 
-        // Close modal when clicking anywhere
+
         modal.addEventListener('click', function() {
             modal.style.display = 'none';
             document.body.style.overflow = 'auto'; // Restore scrolling
         });
 
-        // Your existing observer code remains the same
+
         const observerOptions = {
             root: null,
             rootMargin: '0px',
@@ -2409,13 +2355,13 @@ body {
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <!-- Meta tag untuk mencegah zoom pada mobile -->
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     
     <title>∞</title>
     
     <style>
-        /* CSS untuk mencegah zoom dan screenshot */
+
         html, body {
             /* Mencegah double-tap zoom pada iOS */
             touch-action: manipulation;
@@ -2480,9 +2426,9 @@ body {
     
 
     <script>
-        // Script untuk mencegah screenshot dan tindakan copy
+
         document.addEventListener('keydown', function(e) {
-            // Mencegah screenshot dengan keyboard shortcut
+
             if (
                 (e.ctrlKey && e.shiftKey && e.key === 'I') || // Chrome dev tools
                 (e.ctrlKey && e.shiftKey && e.key === 'C') || // Chrome dev tools
@@ -2496,21 +2442,17 @@ body {
             }
         });
 
-        // Mencegah klik kanan
+
         document.addEventListener('contextmenu', function(e) {
             e.preventDefault();
         });
 
-        // Mencegah copy paste
+
         document.addEventListener('copy', function(e) {
             e.preventDefault();
         });
         
-        // Pesan peringatan ketika mencoba screenshot
-        document.addEventListener('keyup', function(e) {
-            if (e.key === 'PrintScreen') {
-                alert('ngapain di ss bang?');
-            }
+
         });
     </script>
 </body>
