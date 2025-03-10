@@ -583,5 +583,91 @@
         closeBtnBottom.addEventListener('click', hideNotification);
     });
 </script>
+    <audio id="audioPlayer" src="okk.mp3"></audio>
+
+<button id="playPauseBtn">
+    <div class="play-icon"></div>
+</button>
+
+<style>
+    /* Styling tombol */
+    #playPauseBtn {
+        position: fixed;
+        bottom: 30px; /* Ditarik ke atas */
+        left: 50%;
+        transform: translateX(-50%);
+        width: 50px;
+        height: 50px;
+        background-color: #283954;
+        border: 2px solid #f4ebdc;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        transition: all 0.3s ease;
+        outline: none;
+    }
+
+    /* Animasi hover */
+    #playPauseBtn:hover {
+        transform: translateX(-50%) scale(1.1);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Efek saat ditekan */
+    #playPauseBtn:active {
+        transform: translateX(-50%) scale(0.9);
+    }
+
+    /* Ikon play */
+    .play-icon {
+        width: 0;
+        height: 0;
+        border-left: 10px solid #f4ebdc;
+        border-top: 6px solid transparent;
+        border-bottom: 6px solid transparent;
+        transition: all 0.3s ease;
+    }
+
+    /* Ikon pause */
+    .pause-icon {
+        display: flex;
+        justify-content: space-between;
+        width: 12px;
+    }
+
+    .pause-icon div {
+        width: 4px;
+        height: 12px;
+        background-color: #f4ebdc;
+    }
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const playPauseBtn = document.getElementById("playPauseBtn");
+        const audioPlayer = document.getElementById("audioPlayer");
+
+        playPauseBtn.addEventListener("click", function () {
+            if (audioPlayer.paused) {
+                audioPlayer.play();
+                showPauseIcon();
+            } else {
+                audioPlayer.pause();
+                showPlayIcon();
+            }
+        });
+
+        function showPlayIcon() {
+            playPauseBtn.innerHTML = '<div class="play-icon"></div>';
+        }
+
+        function showPauseIcon() {
+            playPauseBtn.innerHTML = '<div class="pause-icon"><div></div><div></div></div>';
+        }
+    });
+</script>
 </body>
 </html>
